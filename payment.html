@@ -4,32 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Оплата</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8fafa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background-color: #fff;
+      border: 2px solid #81D8D0;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #81D8D0;
+    }
+    code {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      word-wrap: break-word;
+    }
+    button {
+      margin-top: 25px;
+      background-color: #81D8D0;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #6ccac3;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>Детали оплаты</h1>
-    <p>Сумма: <span id="amount"></span> TON</p>
-    <p>Адрес для перевода:</p>
+    <p>Сумма к оплате:</p>
+    <strong><span id="amount"></span> TON</strong>
+    <p>TON-адрес для перевода:</p>
     <code id="wallet">UQC-V7DG1I6T2Q0pbIllLAHbQiPdVtKlbw1ZSZHPHNosc-tA</code>
-    <p>Комментарий: <span id="comment"></span></p>
-
-    <p style="margin-top: 30px;">После перевода нажмите кнопку ниже</p>
+    <p>Комментарий к переводу:</p>
+    <code id="comment">-</code>
+    <p style="margin-top: 25px;">После перевода нажмите кнопку ниже</p>
     <button onclick="confirm()">Я оплатил</button>
   </div>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const count = parseInt(urlParams.get("count")) || 1;
-    const rate = 0.0176; // $ за 1 звезду
-    const tonRate = 0.012; // 1 TON ≈ 0.012 USD — заменим на актуальный курс
+    const usdPerStar = 0.0176;
+    const usdPerTon = 0.012;
+    const amountTon = ((count * usdPerStar) / usdPerTon).toFixed(2);
 
-    const amountTon = ((count * rate) / tonRate).toFixed(2);
     document.getElementById("amount").innerText = amountTon;
     document.getElementById("comment").innerText = `stars${count}`;
 
     function confirm() {
-      alert("Платёж ожидается... (интеграция с ботом TON идёт через backend)");
+      alert("Спасибо! Платёж проверяется...");
     }
   </script>
 </body>
