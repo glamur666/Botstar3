@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #d0f8f8, #ccf2f2);
+  color: #0a3d62;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #40e0d0;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.title span {
+  color: #0a3d62;
+}
+
+#stars-input {
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 2px solid #40e0d0;
+  outline: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.quick-buttons button {
+  padding: 10px 18px;
+  background: #40e0d0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quick-buttons button:hover {
+  background: #2dcac1;
+}
+
+#pay-btn {
+  padding: 14px 30px;
+  background-color: #22c55e;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#pay-btn:hover {
+  background-color: #1fae52;
+}

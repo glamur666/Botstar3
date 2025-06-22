@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e0f7f7, #ccf2f2);
+  color: #0a3d62;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.welcome-container {
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.fade-in {
+  font-size: 24px;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.tiffany {
+  color: #40e0d0;
+  font-weight: bold;
+}
+
+#buy-stars-btn {
+  padding: 15px 30px;
+  background-color: #40e0d0;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+#buy-stars-btn:hover {
+  background-color: #2ccac2;
+}
+
+.bottom-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bottom-buttons a {
+  text-decoration: none;
+  color: #0a3d62;
+  font-weight: 600;
+  background: #e1f7f7;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

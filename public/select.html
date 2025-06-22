@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Выбор звёзд</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="select.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">naBLOKE <span>STARS</span></h1>
+
+    <input type="number" id="stars-input" placeholder="Введите количество звёзд..." min="50" step="50">
+
+    <div class="quick-buttons">
+      <button data-stars="50">50</button>
+      <button data-stars="100">100</button>
+      <button data-stars="150">150</button>
+      <button data-stars="250">250</button>
+      <button data-stars="350">350</button>
+      <button data-stars="500">500</button>
+    </div>
+
+    <button id="pay-btn">Оплатить</button>
+  </div>
+
+  <script src="select.js"></script>
+</body>
+</html>
