@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Купить звезды</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Выберите количество звёзд</h1>
+    <select id="starCount">
+      <option value="1">1 звезда</option>
+      <option value="5">5 звёзд</option>
+      <option value="10">10 звёзд</option>
+      <option value="25">25 звёзд</option>
+      <option value="50">50 звёзд</option>
+    </select>
+    <button onclick="goToPayment()">Перейти к оплате</button>
+  </div>
+
+  <script>
+    function goToPayment() {
+      const count = document.getElementById("starCount").value;
+      window.location.href = `payment.html?count=${count}`;
+    }
+  </script>
+</body>
+</html>
