@@ -1,0 +1,55 @@
+body {
+  background-color: #121212;
+  font-family: Arial, sans-serif;
+  color: #00ffd0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.welcome-container {
+  padding: 50px 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #00ffd0;
+}
+
+.main-button {
+  background-color: #00ffd0;
+  color: #121212;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.main-button:hover {
+  background-color: #00e0b8;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.bottom-link {
+  color: #00ffd0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.bottom-link:hover {
+  text-decoration: underline;
+}
+
+.tiffany-star {
+  color: #00ffd0;
+}
