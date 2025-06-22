@@ -3,8 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Купить звезды</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Купить звёзды</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8fafa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+    h1 {
+      color: #81D8D0;
+      margin-bottom: 30px;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #81D8D0;
+      border-radius: 5px;
+      outline: none;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #81D8D0;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #6ccac3;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -16,6 +52,7 @@
       <option value="25">25 звёзд</option>
       <option value="50">50 звёзд</option>
     </select>
+    <br />
     <button onclick="goToPayment()">Перейти к оплате</button>
   </div>
 
