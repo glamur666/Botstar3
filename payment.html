@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Оплата</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Детали оплаты</h1>
+    <p>Сумма: <span id="amount"></span> TON</p>
+    <p>Адрес для перевода:</p>
+    <code id="wallet">UQC-V7DG1I6T2Q0pbIllLAHbQiPdVtKlbw1ZSZHPHNosc-tA</code>
+    <p>Комментарий: <span id="comment"></span></p>
+
+    <p style="margin-top: 30px;">После перевода нажмите кнопку ниже</p>
+    <button onclick="confirm()">Я оплатил</button>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const count = parseInt(urlParams.get("count")) || 1;
+    const rate = 0.0176; // $ за 1 звезду
+    const tonRate = 0.012; // 1 TON ≈ 0.012 USD — заменим на актуальный курс
+
+    const amountTon = ((count * rate) / tonRate).toFixed(2);
+    document.getElementById("amount").innerText = amountTon;
+    document.getElementById("comment").innerText = `stars${count}`;
+
+    function confirm() {
+      alert("Платёж ожидается... (интеграция с ботом TON идёт через backend)");
+    }
+  </script>
+</body>
+</html>
